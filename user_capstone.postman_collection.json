@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "813dbfe7-8252-4b23-b4cd-bc2199df7d70",
+		"name": "user_capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25001930"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test4@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjExLCJuYW1lIjpudWxsLCJhZ2UiOm51bGwsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkalNLdDRNUjNwQzRXb25RTXpKOS9YZTBwNE5PZmpNOENOdkEyUnJtay5QVmVjbEx0ck1RbkMiLCJhdmF0YXIiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjMtMDMtMTBUMTE6MDg6NDguNTMyWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMTBUMDQ6MDg6NDguNTQ2WiJ9LCJpYXQiOjE2Nzg0NDc3NjUsImV4cCI6MTY3ODUzNDE2NX0.S862NGqRM4xJKVogxnw1AoVUCPJTNFm9Pwx_XngcuTI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image by user id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODUzNDE5OSwiZXhwIjoxNjc4NjIwNTk5fQ.Y2xCJBzq82PaLl084V8Ep3vMyKRvAMXvJoKLSM6Uw3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/image/by-id/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"image",
+						"by-id",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get image by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODUzNDE5OSwiZXhwIjoxNjc4NjIwNTk5fQ.Y2xCJBzq82PaLl084V8Ep3vMyKRvAMXvJoKLSM6Uw3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/image/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"image",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment by Id image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODcyMjQ0NCwiZXhwIjoxNjc4ODA4ODQ0fQ.Ud22xjef6o0mNd3P7LRpcWhppG5yl84PAHnjz6IoaoE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/comment/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comment",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check Saved Image by Image id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODYzNTg1NSwiZXhwIjoxNjc4NzIyMjU1fQ._tWlCuYRMub3Sd4tLeYmBw5f1HCVgnBmHvjx0cUBVnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/save-image/by-image/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"save-image",
+						"by-image",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODYzNTg1NSwiZXhwIjoxNjc4NzIyMjU1fQ._tWlCuYRMub3Sd4tLeYmBw5f1HCVgnBmHvjx0cUBVnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 11,\n    \"imageId\": 7,\n    \"content\": \"Test Comment\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjExLCJuYW1lIjpudWxsLCJhZ2UiOm51bGwsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkalNLdDRNUjNwQzRXb25RTXpKOS9YZTBwNE5PZmpNOENOdkEyUnJtay5QVmVjbEx0ck1RbkMiLCJhdmF0YXIiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjMtMDMtMTBUMTE6MDg6NDguNTMyWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMTBUMDQ6MDg6NDguNTQ2WiJ9LCJpYXQiOjE2Nzg0NDc3NjUsImV4cCI6MTY3ODUzNDE2NX0.S862NGqRM4xJKVogxnw1AoVUCPJTNFm9Pwx_XngcuTI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test3@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Saved Image by user id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODYzNTg1NSwiZXhwIjoxNjc4NzIyMjU1fQ._tWlCuYRMub3Sd4tLeYmBw5f1HCVgnBmHvjx0cUBVnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/save-image/by-user/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"save-image",
+						"by-user",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get image created by user id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODYzNTg1NSwiZXhwIjoxNjc4NzIyMjU1fQ._tWlCuYRMub3Sd4tLeYmBw5f1HCVgnBmHvjx0cUBVnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/image/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"image",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjExLCJuYW1lIjpudWxsLCJhZ2UiOm51bGwsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkalNLdDRNUjNwQzRXb25RTXpKOS9YZTBwNE5PZmpNOENOdkEyUnJtay5QVmVjbEx0ck1RbkMiLCJhdmF0YXIiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjMtMDMtMTBUMTE6MDg6NDguNTMyWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMTBUMDQ6MDg6NDguNTQ2WiJ9LCJpYXQiOjE2Nzg0NDc3NjUsImV4cCI6MTY3ODUzNDE2NX0.S862NGqRM4xJKVogxnw1AoVUCPJTNFm9Pwx_XngcuTI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"imageName\": \"Test2\",\n    \"link\": \"https://simple.wikipedia.org/wiki/Link#/media/File:Chain_link_icon.png\",\n    \"description\": \"test2\",\n    \"userId\": 11\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/image/upload/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"image",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"1234\",\n  \"name\": \"hihi\",\n  \"age\": 60,\n  \"avatar\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOjksIm5hbWUiOm51bGwsImFnZSI6bnVsbCwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRublI5ZkRVaC9VY0gxNDVLUmNwR0tPWmcvWXpNQi9ZWktaL3kvUEVxRGtEYjJmT3lTL1VIYSIsImF2YXRhciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMFQxMTowNjo1MS45MTBaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xMFQwNDowNjo1MS45MjlaIn0sImlhdCI6MTY3ODYzNTg1NSwiZXhwIjoxNjc4NzIyMjU1fQ._tWlCuYRMub3Sd4tLeYmBw5f1HCVgnBmHvjx0cUBVnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 11,\n    \"imageId\": 7\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/save-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"save-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
